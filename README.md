@@ -42,6 +42,14 @@ Input:
 - X1, ….. Xn   - Features matrix for each graph (for each year)
 - L1 ….. Ln     - Labels for each year, described above.
 
+### Running instructions:
+
+set GRAPHS_NUM to number of years, according to the data
+run with the following command:
+python GCN_temporal_communities.py
+
+for nni see the attached overview.
+
 
 
 
