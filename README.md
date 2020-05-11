@@ -22,22 +22,25 @@ For this purpose, we used a GCN model, created using the pytorch geometric.
 
 For this purpose, we used a GCN model, created using the pytorch geometric.
 
-GCN
+### GCN
 We first separated the data by years, and created 21 graphs (for each year). Each writer now is having a label for each year. Our labels will be distribution vectors. For example, if a writer at 2000 wrote 20 articles at 1 topic, and 30 at 10 topic, it’s vector-label will be look as the following:
+
 [ 0, 20/50, 0, 0, 0, 0, 0, 0, 0, 30/50, 0, 0, 0, 0, 0 ]
 
 Each writer will have 21 vectors - for each year. 
 If a writer didn’t write anything in a specific year, we labeled him with -1.
 For each of the graphs, we created features matrix using the following features:
- page rank
- general
- Average_Neighbor_Degree
- k core
-The code we used for the calculation lies here: https://github.com/louzounlab/graph-measures
+- page rank
+- general
+- Average_Neighbor_Degree
+- k core
+
+The code we used for these calculation lies here: https://github.com/louzounlab/graph-measures 
+
 Input:
-A1, ….. An   -   Adjacency matrix for each year
-X1, ….. Xn   - Features matrix for each graph (for each year)
-L1 ….. Ln     - Labels for each year, described above.
+- A1, ….. An   -   Adjacency matrix for each year
+- X1, ….. Xn   - Features matrix for each graph (for each year)
+- L1 ….. Ln     - Labels for each year, described above.
 
 
 
